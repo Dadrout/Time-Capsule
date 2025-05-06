@@ -1,143 +1,127 @@
-Time Capsule
+# Time Capsule
 
-Time Capsule — это приложение, позволяющее отправлять письма в будущее.
-Пользователь указывает email, тему, текст сообщения, дату отправки и, при желании, прикрепляет файл.
-В назначенный день письмо автоматически доставляется на указанный адрес.
-Это отличный способ сохранить важные мысли, эмоции и воспоминания для будущего себя или близких.
-
+*Time Capsule* — an application that allows users to send emails into the future.  
+Users can specify an email address, subject, message, send date, and optionally attach a file.  
+On the specified date, the email is automatically delivered to the recipient.  
+This is a great way to save important thoughts, emotions, and memories for your future self or loved ones.
 
 ---
 
- Демо
+## 📌 Demo
 
-Готовая версия доступна по ссылке:
+The live version is available here:
+
 https://timecaps.netlify.app/
 
+---
+
+## 🚀 Core Features
+
+- Create a capsule with email, subject, message, send date, and optional file attachment.
+- View all capsules on the My Capsules page.
+- Automatically send emails on the scheduled date using Cloud Functions and a scheduler.
+- Client-side and server-side data validation and error handling.
+- File storage via *Cloudinary*.
 
 ---
 
- Основной функционал
+## 🛠️ Tech Stack
 
-Создание капсулы с email, темой, текстом, датой отправки и, опционально, файлом.
+- *Frontend:* HTML, CSS, JavaScript (Vanilla)
+- *Backend:* Firebase Cloud Functions (Node.js)
+- *Database:* Firestore
+- *File Storage:* Cloudinary (for file attachments)
+- *Email Service:* SMTP via Zoho Mail
+- *Deployment:* Netlify (Frontend) & Firebase Functions (Backend)
 
-Просмотр всех капсул на странице My Capsules.
+### 📌 Why this stack?
 
-Автоматическая отправка писем в установленную дату с помощью Cloud Functions и планировщика.
-
-Обработка ошибок и валидация данных на клиенте и сервере.
-
-Хранение прикрепленных файлов в Firebase Storage.
-
-
-
----
-
- Стек технологий
-
-Frontend: HTML, CSS, JavaScript (Vanilla)
-Backend: Firebase Cloud Functions (Node.js)
-База данных: Firestore
-Хранилище файлов: Firebase Storage
-Email: SMTP через Zoho Mail
-Деплой: Netlify (Frontend) и Firebase Functions (Backend)
-
-Почему выбран этот стек:
-
-Firebase предоставляет бесплатный и удобный функционал с триггерами.
-
-Netlify — простой и быстрый способ хостинга статических сайтов.
-
-Zoho SMTP — бесплатная и надёжная альтернатива другим почтовым сервисам.
-
-Node.js + Firebase Functions позволяют запускать задачи по расписанию без лишних затрат.
-
-
+- *Firebase:* Easy-to-use, free tier, and built-in triggers.
+- *Netlify:* Quick and simple static site deployment.
+- *Zoho SMTP:* Free and reliable alternative for email.
+- *Node.js + Firebase Functions:* Perfect for scheduled tasks without additional costs.
 
 ---
 
-Установка и локальный запуск
+## ⚙️ Installation & Local Setup
 
-> Для обычного использования достаточно воспользоваться демо-ссылкой выше.
+> For normal use, the demo link above is enough.
 
+### 📥 Clone the repository:
 
-
-### Клонирование репозитория:
-
-```git clone https://github.com/Dadrout/Time-Capsule.git
+```
+git clone https://github.com/Dadrout/Time-Capsule.git
 cd Time-Capsule
 ```
-
-### Установка зависимостей:
-
-```cd functions
+📦 Install dependencies:
+```
+cd functions
 npm install
 ```
-
-### Настройка переменных окружения для SMTP:
-
-```firebase functions:config:set smtp.user="ВАШ_EMAIL@zoho.com" smtp.pass="ПАРОЛЬ_ИЛИ_APP_PASSWORD"
-
-Локальное тестирование функций:
-
+🔐 Set up environment variables for SMTP:
+```
+firebase functions:config:set smtp.user="YOUR_EMAIL@zoho.com" smtp.pass="APP_PASSWORD"
+```
+▶️ Local testing:
+```
 firebase emulators:start
 ```
-
-### Деплой функций:
-
-```firebase deploy --only functions
+🚀 Deploy backend functions:
 ```
+firebase deploy --only functions
+```
+🚀 Deploy frontend on Netlify:
 
-### Деплой frontend на Netlify:
-
-1. Перейдите в Netlify.
-
-
-2. Создайте новый проект, выберите папку Public или корень проекта.
+1. Go to Netlify
 
 
-3. Нажмите Deploy.
+2. Create a new project and choose the Public folder or the root directory.
 
 
-
-
----
-
- Возможности для развития
-
-Добавление авторизации для приватности капсул.
-
-Напоминания о запланированных капсулах.
-
-Генерация текста писем с помощью AI.
-
-Возможность редактирования и отмены капсул до их отправки.
-
-
-
----
-
- Известные ограничения
-
-Все капсулы пока доступны публично на странице My Capsules.
-
-Ограничения SMTP Zoho Mail могут повлиять на массовую рассылку.
-
-Нельзя выбрать дату в прошлом (валидация работает на сервере).
-
-
-
----
-
-📹 Видео-демо
-
-> Ссылка будет добавлена позже.
+3. Click Deploy.
 
 
 
 
 ---
 
- Заключение
+🔧 Future Improvements
 
-Этот проект задумывался как простой инструмент для отправки писем в будущее.
-Он уже полностью рабочий, легко расширяется и готов для добавления новых возможностей.
+Add user authentication to make capsules private.
+
+Add notifications/reminders for upcoming capsule send dates.
+
+Add AI-powered text generation for letters.
+
+Allow editing or deleting capsules before their scheduled send date.
+
+
+
+---
+
+⚡ Known Limitations
+
+Currently, all capsules are public on the My Capsules page.
+
+SMTP limits (Zoho Mail) might impact mass email sending.
+
+Past dates are disabled (server-side validation).
+
+
+
+---
+
+📹 Demo Video
+
+> Link will be added later.
+
+
+
+
+---
+
+📌 Conclusion
+
+This project was designed as a simple and functional time capsule service.
+It’s already working, easy to scale, and ready for new features to be added in the future.
+
