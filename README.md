@@ -111,7 +111,7 @@ Past dates are disabled (server-side validation).
 
 📹 Demo Video
 
-> Link will be added later.
+https://youtu.be/WcUa0F6CqV8
 
 
 
