@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time capsule</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/stlye.css" />
+  </head>
+  <body>
+    <header>
+      <div><a href="capsules.html">My capsules</a></div>
+    </header>
+    <main>
+      <section id="time_capsule">
+        <form id="form" action="#">
+          <h3 id="time__tite">Time capsule</h3>
+          <div class="form__block">
+            <label for="mail">Email</label>
+            <input
+              type="email"
+              name="mail"
+              id="mail"
+              placeholder="example@gmail.com"
+              required
+            />
+          </div>
+          <div class="form__block">
+            <label for="sub">Subject</label>
+            <input type="text" name="sub" id="sub" placeholder="" />
+          </div>
+          <div class="form__block">
+            <label for="mes">Text</label>
+            <textarea name="mes" id="mes"></textarea>
+          </div>
+          <div class="form__block">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required />
+          </div>
+          <div class="form__block">
+            <label for="file">Upload file <span>(optional)</span></label>
+            <input type="file" name="file" id="file" />
+          </div>
+          <button type="submit">Send Capsule</button>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="scripts/firebase.js"></script>
+    <script type="module" src="scripts/script.js"></script>
+  </body>
+</html>

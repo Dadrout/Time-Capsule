@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/stlye.css" />
+    <title>My Capsules</title>
+  </head>
+  <body>
+    <header>
+      <div><a href="index.html">Send Capsule</a></div>
+    </header>
+    <main>
+      <h2 id="capsule__title">My Capsules</h2>
+      <section id="tables">
+        <table>
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Subject</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>File</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="capsules-list">
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script type="module" src="scripts/firebase.js"></script>
+    <script type="module" src="scripts/list.js"></script>
+  </body>
+</html>
