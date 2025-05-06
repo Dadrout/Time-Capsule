@@ -93,7 +93,7 @@ Add notifications/reminders for upcoming capsule send dates.
 
 Add AI-powered text generation for letters.
 
-Allow editing or deleting capsules before their scheduled send date.
+Allow editing capsules before their scheduled send date.
 
 
 
@@ -102,8 +102,6 @@ Allow editing or deleting capsules before their scheduled send date.
 ⚡ Known Limitations
 
 Currently, all capsules are public on the My Capsules page.
-
-SMTP limits (Zoho Mail) might impact mass email sending.
 
 Past dates are disabled (server-side validation).
 
